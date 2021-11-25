@@ -2,9 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+import {DataLayer} from "./DataLayer"
+import reducer,{initialState} from "./reducer"
 
 ReactDOM.render(
-  <App />,
+  <DataLayer initialState={initialState} reducer = {reducer}>
+
+    <App />
+  </DataLayer>,
 
   document.getElementById("root")
 );
